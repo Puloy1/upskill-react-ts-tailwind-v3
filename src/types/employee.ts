@@ -1,5 +1,11 @@
 export type EmployeeStatus = "active" | "inactive" | "on-leave";
 
+export const STATUS_LABELS: Record<EmployeeStatus, string> = {
+  active: "Active",
+  inactive: "Inactive",
+  "on-leave": "On Leave",
+};
+
 export type Employee = {
   id: number;
   name: string;
