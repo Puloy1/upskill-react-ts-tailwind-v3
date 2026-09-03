@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+/* Tailwind v4 declares design tokens here, in CSS — not in a JS config file.
+   Anything declared in @theme generates utilities automatically:
+   --color-brand-500 gives you bg-brand-500, text-brand-500, border-brand-500.
+
+   Day 2, Exercise 1 decides which values from product-spec.md belong here.
+   Two are seeded so the pipeline is provably working; the rest is your call. */
+@theme {
+  --color-brand-500: oklch(0.55 0.21 264);
+  --spacing-card: 1.25rem;
+}
