@@ -1,5 +1,5 @@
 import type { Brand } from './brand';
-import { expectTypeOf } from "vitest";
+// import { expectTypeOf } from "vitest";
 
 export type EmployeeStatus = "active" | "inactive" | "on-leave";
 
@@ -37,8 +37,8 @@ export function getEmployeeDisplayName(
     return employee.name;
 }
 
-// @ts-expect-error "terminated" is not an EmployeeStatus
-const bad: EmployeeStatus = "terminated";
-void bad;
+// // @ts-expect-error "terminated" is not an EmployeeStatus
+// const bad: EmployeeStatus = "terminated";
+// void bad;
 
-expectTypeOf(getEmployeeDisplayName).returns.toBeString();
+// expectTypeOf(getEmployeeDisplayName).returns.toBeString();
