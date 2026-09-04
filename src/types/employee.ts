@@ -1,4 +1,5 @@
 import type { Brand } from './brand';
+import type { ApiError } from "./api";
 // import { expectTypeOf } from "vitest";
 
 export type EmployeeStatus = "active" | "inactive" | "on-leave";
@@ -30,6 +31,17 @@ export type Employee = {
   department: string;
   status: EmployeeStatus;
 };
+
+export type EmployeeState =
+  | { status: "loading" }
+  | { status: "empty" }
+  | { status: "error"; error: ApiError }
+  | { status: "success"; employee: Employee };
+
+export type EmployeeAction =
+| { type: "load" }
+| { type: "loaded"; employee: Employee }
+| { type: "failed"; error: ApiError };
 
 export function getEmployeeDisplayName(
   employee: Employee
